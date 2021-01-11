@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vopros 4/2</title>
+        <meta charset="UTF-8">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <form name="vvod">
+            <input type="text" name="text" placeholder="Ввод текста" value="">
+            <input type="button" id="add_btn" value="Добавить">
+        </form>
+        <ul id="list">
+            
+        </ul>
+        <script>
+            let addBtn = document.getElementById("add_btn");
+            addBtn.addEventListener("click",add);
+            function add(){
+                let text_value = document.vvod.text.value;
+                let text_content = document.createTextNode(text_value);
+                let list = document.getElementById("list");
+                let li = document.createElement("li");
+                /*Вставка элемента*/
+                list.appendChild(li);
+                li.appendChild(text_content);                
+            }
+        </script>
+    </body>
+</html>
